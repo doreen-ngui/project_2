@@ -29,5 +29,5 @@ A modern, responsive web application for real-time currency conversion with a fo
 [git clone https://github.com/doreen-ngui/project_2.git]()
 
 ## Live Demo
-[video demo](currencyconverterdemovideo.mp4)
+[video demo on Google Drive](https://drive.google.com/file/d/1q0u9hTA13NaPPyodl7p7TRRX73D796Kq/view?usp=sharing)
  
