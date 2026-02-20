@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <div>
+                    <h1>Currency Converter</h1>
+                    <p>Real-time exchange rates</p>
+                </div>
+            </div>
+            <div class="header-info">
+                <div class="last-update">Last updated: <span id="update-time">Loading...</span></div>
+            </div>
+        </header>
+        
+        <main>
+            <section class="converter-card">
+                <h2 class="card-title">
+                    <i class="fas fa-calculator"></i>
+                    Currency Converter
+                </h2>
+                
+                <div class="converter-form">
+                    <div class="amount-group">
+                        <label for="amount">Amount to Convert</label>
+                        <div class="amount-input">
+                            <div class="currency-symbol" id="from-symbol">$</div>
+                            <input type="number" id="amount" min="0" step="0.01" value="100" placeholder="Enter amount">
+                        </div>
+                    </div>
+                    
+                    <div class="currency-selectors">
+                        <div class="currency-select">
+                            <label for="from-currency">From Currency</label>
+                            <select id="from-currency"></select>
+                        </div>
+                        
+                        <button class="swap-button" id="swap-currencies" title="Swap currencies">
+                            <i class="fas fa-exchange-alt"></i>
+                        </button>
+                        
+                        <div class="currency-select">
+                            <label for="to-currency">To Currency</label>
+                            <select id="to-currency"></select>
+                        </div>
+                    </div>
+                    
+                    <button class="convert-button" id="convert-btn">
+                        <i class="fas fa-sync-alt"></i> Convert Currency
+                    </button>
+                </div>
+                
+                <div class="result-display" id="result-display" style="display: none;">
+                    <h3>Conversion Result</h3>
+                    <div class="conversion-result" id="conversion-result">0.00</div>
+                    <div class="conversion-rate" id="conversion-rate">1 USD = 0.00 EUR</div>
+                    <p id="conversion-date">Date: Loading...</p>
+                </div>
+                
+                <div class="loading" id="loading-converter">
+                    <div class="spinner"></div>
+                    <p>Loading currency data...</p>
+                </div>
+            </section>
+            
+            <section class="rates-card">
+                <h2 class="card-title">
+                    <i class="fas fa-chart-line"></i>
+                    Popular Exchange Rates
+                </h2>
+                
+                <p>Current exchange rates relative to 
+                    <select id="base-currency-select">
+                        <option value="USD">USD (US Dollar)</option>
+                    </select>
+                </p>
+                
+                <table class="rates-table">
+                    <thead>
+                        <tr>
+                            <th>Currency</th>
+                            <th>Code</th>
+                            <th>Rate</th>
+                            <th>Change (24h)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rates-table-body"></tbody>
+                </table>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2025 Currency Converter </p>
+            <div class="api-info">
+                <p><i class="fas fa-info-circle"></i> API Status: <span id="api-status">Fetching data...</span></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
