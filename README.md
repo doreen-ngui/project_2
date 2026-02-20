@@ -26,8 +26,8 @@ A modern, responsive web application for real-time currency conversion with a fo
 3. Open `index.html` in any modern browser
 
 ### Option 2: Clone Repository
-[git clone https://github.com/yourusername/kes-currency-converter.git]()
+[git clone https://github.com/doreen-ngui/project_2.git]()
 
 ## Live Demo
-[video demo]()
+[video demo](https://github.com/doreen-ngui/project_2/commit/6b751838b2108f07bc0e1949f79d33d0a6da5a39)
  
